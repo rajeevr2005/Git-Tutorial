@@ -1,0 +1,44 @@
+git log --oneline       //ye command dekhne ke liye run karte h ki mai kya kya aur kab commit kiye h project me  
+
+git reset --hard HEAD~1     //last second wala commit pe jaane ke liye
+
+U stands foruntrack file
+M stands for modified
+A stands for Added
+
+
+git status -s     //ye btata h ki commit ke pahle aur commit ke baad ka file stages jaise untrack, Added, modified.
+
+//agar tum koi ek file first time save kar liya aur git status wala command run kar diya to output me kuch nhi aayega kyuki usme mai kuch change hi nhi kiya h wo first time hi save kiye h, lekin agar mai ab kuch change karke save karunga aur git status karunga to wo file ka name aayega kyuki mai usme change kiya hu. 
+
+//PS C:\Users\HomePC\Desktop\Intern\github\git> git status -s
+ M learn.txt                //yaha M likha h iska matlab modified file h
+?? ../../Bootstrap_4/       //yaha ?? diya h iska matlab h ki git is folder ko nhi pahchanta h kyuki mai isko git add nhi kiya hu
+
+
+//Agar mere pass 1000 line ka code aur mai ek larke ko ek feature bnane ke liye bola to mai kya karunga ki jo mera 1000 lineka code h n mai uska ek copy us larke ko de dunga aur bolunga ki tum feature develop karo, jab wo develop kar lega aur acche se check kar lega ki hai wo sahi se kaam kar raha h to phirjo 1000 line ka main code hai usme mai us feature wale code ko add kar lunga.
+
+//jab mai us larke ko copy dungamatlab 1000 line ka code dunga to usko branch bolte h usko create karne ke liye command h 
+
+
+//command :- git branch featureNavbar        //name kuch bhi de sakte ho lekin featureNavbar matlab ki wo Navbar feature design kar raha h aesa, ye bhi likh sakte ho jaise developMenuBar  developFooter aesa
+
+//Project ka branch dekhne ke liye 
+command :-  git branch
+
+//isme kitna branch aur name sab dikha dega
+
+
+PS C:\Users\HomePC\Desktop\Intern\github\git> git branch feature/navbar
+* main                  
+
+//main jo hai agar green color ka rahta h iska matlab hmara project main me hai, agar featurenavbar me switch karna h to   
+
+command:- git switch feature/navbar
+
+PS C:\Users\HomePC\Desktop\Intern\github\git> git switch feature/navbar
+M       github/git/learn.txt
+Switched to branch 'feature/navbar'
+
+
+//jab code ko merge karna ho to main branch pe aa jana 
