@@ -41,4 +41,9 @@ M       github/git/learn.txt
 Switched to branch 'feature/navbar'
 
 
+
 //jab code ko merge karna ho to main branch pe aa jana 
+
+//branch delete karne ke liye 
+command:-  git branch -d branch-name
+example:-  git branch -d footer
