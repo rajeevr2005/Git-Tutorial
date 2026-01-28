@@ -7,6 +7,11 @@ M stands for modified
 A stands for Added
 
 
+//agar koi GitHub pe repository hai, usme tum apne local system PE Lana chahte ho to
+command:- git clone link
+//link jo hai repository open karna hai code option green colour ka usme https wala link copy karke paste karna
+
+
 git status -s     //ye btata h ki commit ke pahle aur commit ke baad ka file stages jaise untrack, Added, modified.
 
 //agar tum koi ek file first time save kar liya aur git status wala command run kar diya to output me kuch nhi aayega kyuki usme mai kuch change hi nhi kiya h wo first time hi save kiye h, lekin agar mai ab kuch change karke save karunga aur git status karunga to wo file ka name aayega kyuki mai usme change kiya hu. 
