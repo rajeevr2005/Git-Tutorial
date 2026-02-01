@@ -1,1 +1,159 @@
+//Sabse pahle ek folder bnaya h name hai GITDEMO
 
+//GITDEMO ke ander ek folder hai LocalRepo
+//avi LocalRepo folder ko git initialise karnge. uske liye pahle LocalRepo folder ke ander jana h aur command run karna hai
+
+command= git init
+
+//ab LocalRepo ke ander folder bnana index.html, aur git command run karna 
+
+command=git status
+
+//phir git bolega ki index.html file hai n, wo untrack file hai, us index.html file ko track karne ke liye
+
+command= git add .
+
+//phir index.html file ke ander kuch likhna jaise
+<p>This s index.html file</p>
+ aur save karne ke liye command run karna
+
+
+command= git commit -m "New Para added"
+
+//ab git status command run karna
+
+output= on branch master nothing to commit, working tree clean 
+
+
+//Ye to hmara local system me ho gya, ab mujhe isse GitHub pe push karna h to, mujhe sabse pahle GitHub pe new Repository bnana hoga, phir uske baad command run karna terminal me
+
+command= git remote add origin <link>	//link ke jagah repo ka link likhna, jaha GitHub pe likha rahta h create a new file or upload an existing file	udher hi right side thora upper me link hoga, usko copy karke link ke jagah likh dena.
+
+
+//check karne ke liye command run karna
+
+command=git remote -v
+
+
+//check karna h usme branch hai ki nhi to command run karna 
+
+command= git branch
+
+//output=master
+
+//phir master name change karne ke liye command run karna h
+
+command= git branch -M main		//ab branch ka name master se main ho jayega
+
+//ab code ko push karna ho GitHub pe to command run karna 
+
+command= git push origin main		//code hmara GitHub pe push ho jayegi, agar hme ek hi project pe baar baar code push karna ho to hm pahle hi bta denge ki hm git push origin main baar baar nhi likhnge, uske liye command run kar dena
+
+or,  command=  git push -u origin main		//ab next time se sirf git push likhoge phir bhi code push ho jayega
+
+//Next time code push karne ke liye  
+
+command= git push
+
+
+
+//ab code me change hone ke baad command run karna
+command=
+git add.
+git commit -m "This is new feature"
+git push 
+
+
+
+//-------------------------------Branching-------------------------------
+
+//Branch check karne ke liye 
+
+command= git branch
+
+//Branch create karne ke liye
+
+command= git checkout -b feature1		//branch ka name hai feature1
+
+//agar feature1 me jana h to 
+
+command= git checkout feature1
+
+//agar main me jana h to 
+
+command= git checkout main
+
+//agar branch ko delete karna ho to
+
+command= git branch -d feature1
+
+//tum feature1 wala branch me chale jana 
+command= git checkout feature1
+
+//phir index.html wala file me jo likhna hoga likh lena		//tum dekhna GitHub pe main wala option pe click karna wala main aur feature1 bhi hoga
+
+
+
+//1st way to merge file 
+
+//ab mujhe code ko merge karna ho to sabse pahle main wala code aur feature1 wala code ka difference dekhna
+
+command=git diff main
+
+//ab mujhe dono code ko merge karna ho to
+
+command= git merge main
+
+
+
+//2nd way to merge(create PR means Pull Request)
+
+//dekha tha n ki GitHub pe Repo ke paas option aaya tha pull compare request, to wo automatically merge ho jayega, uspe click karna, phir dekhte jana aur merge pe click karte jana, waha pe aata h ki green option confirm merge ki merge ho sakta h ya phir red aesa kuch dikhega
+
+
+
+
+//ye jo bhi merge hua wo GitHub pe ho gya, lekin hmare local system me merge nhi hua, agar hme local system me merge karna ho to 
+
+command=git pull origin main
+
+
+//----------------undo change-----------------
+
+//kabhi kabhi galti se kuch change ho jata h to aur hm command chala diye h 
+command= git status
+	 git add.
+
+//Lekin avi hm git commit -m ""  ye command nhi chalaye h, agar hm ek file me kuch change kiye h to 
+
+command= git reset filename
+
+//lekin agar hm bahut saare file ke ander changes kar diye hue h to command chalana
+
+command=git reset
+
+
+//agar hm galti kuch add ya remove karke aur commit wala command bhi run kar diye hue h to command chalana
+
+command=git reset HEAD~1		//matlab jo HEAD hai n usko ek step piche lekar chale jao
+
+
+//agar hm multiple commit piche jana chahte h to 
+
+command= git reset hash			//tum git log command run karna to commit: hash code aayega to hash code copy karke aur paste karna hash ki jagah	 
+
+
+//Agar pura status check karna h ki kab kya commit hua h to command run karna
+
+command= git log 
+
+
+//hmlog to multiple commit piche aa gye hue h, lekin agar hm git log check karenge to jo commit karke piche gye the wo sab dikhega, agar hm chahte h ki wo delete ho jaye, wo na dikhaye to, command run karna
+
+command=git reset -hard hash 		//jo hash hoga wo
+
+
+//---------------------Fork---------------------
+
+A fork is a new repository that shares  code and visibility settings with the original "upstream" repository.
+Fork is a rough copy
